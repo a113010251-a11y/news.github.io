@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家樂福新聞</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #FAFAF8;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 3rem 1.5rem;
+            border-bottom: 4px solid #c0392b;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.5px;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #e5e5e5;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+        
+        .card-content {
+            padding: 1.8rem;
+        }
+        
+        .category {
+            display: inline-block;
+            background: #c0392b;
+            color: white;
+            padding: 0.4rem 0.9rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .news-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+            font-weight: 700;
+        }
+        
+        .news-card h2 a {
+            color: #1a1a1a;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .news-card h2 a:hover {
+            color: #c0392b;
+        }
+        
+        .date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .date::before {
+            content: "📅";
+        }
+        
+        .description {
+            color: #444;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>家樂福新聞</h1>
+            <p>深度報導台灣零售產業與消費趨勢</p>
+        </div>
+    </header>
+    
+    <main>
+        <div class="news-grid">
+            <article class="news-card">
+                <div class="card-content">
+                    <span class="category">產業新聞</span>
+                    <h2>
+                        <a href="article1.html">家樂福39年招牌將走入歷史 統一砸290億收購後6月改名</a>
+                    </h2>
+                    <p class="date">2026年5月19日</p>
+                    <p class="description">統一集團收購家樂福後確定終止品牌授權，這個陪伴台灣消費者39年的量販店招牌預計今年6月全面更換</p>
+                </div>
+            </article>
+            
+            <article class="news-card">
+                <div class="card-content">
+                    <span class="category">產業分析</span>
+                    <h2>
+                        <a href="article2.html">一人家戶時代來臨 量販店如何轉型求生？</a>
+                    </h2>
+                    <p class="date">2026年5月18日</p>
+                    <p class="description">台灣單人戶比例突破三成，傳統量販店大包裝策略面臨挑戰，業者紛紛調整經營模式</p>
+                </div>
+            </article>
+        </div>
+    </main>
+</body>
+</html>
